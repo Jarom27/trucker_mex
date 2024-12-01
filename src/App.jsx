@@ -1,9 +1,16 @@
-function App() {
+import { Outlet } from "react-router"
+import Navbar from "./components/Navbar"
 
+function App() {
   return (
-    <>
-      <h1>Trucker Mex</h1>
-    </>
+    <div className="view">
+      <div className="sidebar">
+        <h1>Trucker Mex</h1>
+        <Navbar></Navbar>
+        
+      </div>
+      <Outlet></Outlet>
+    </div>
   )
 }
 

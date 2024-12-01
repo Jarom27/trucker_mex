@@ -1,0 +1,100 @@
+/* index.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --principal: #f63841;
+    --secondary: #192bc2;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+p,
+a {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.view {
+    display: flex;
+}
+
+.sidebar {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    height: 100vh;
+    background-color: var(--principal);
+}
+
+.leaflet-container {
+    height: 100%;
+    /* Asegúrate de que el contenedor tenga altura */
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    padding: 2rem;
+}
+
+.devices {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.device-card {
+    width: 100%;
+    padding: 2rem;
+    box-shadow: black 1px 1px 10px;
+    border-radius: 1rem 1rem;
+
+}
+
+#map {
+    height: 100vh;
+    /* El mapa ocupará toda la pantalla */
+    width: 100%;
+}
