@@ -13,7 +13,12 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function Map() {
-    const [vehicleLocation,setVehicleLocation] = useState(null)
+    const [vehicleLocation,setVehicleLocation] = useState(
+        [{
+            "log_id" : localStorage.getItem("last_log_id"),
+            "latitude" : localStorage.getItem("last_latitude"), 
+            "longitude" : localStorage.getItem("last_longitude") 
+        }])
     const [loading, setLoading] = useState(true); // Indicador de carga
     const [error, setError] = useState(null); 
     const params = useParams()
@@ -28,7 +33,14 @@ export default function Map() {
                 });
                 
                 const result = await response.json();
+                
                 setVehicleLocation(result);
+                if(vehicleLocation != null){
+                    localStorage.setItem("last_log_id", vehicleLocation[0].log_id)
+                    localStorage.setItem("last_latitude", vehicleLocation[0].latitude)
+                    localStorage.setItem("last_longitude", vehicleLocation[0].longitude )
+                    localStorage.setItem("last_altitude", vehicleLocation[0].altitude)
+                }
             }catch (err) {
                 setError(err.message); // Maneja errores
               } finally {
@@ -36,14 +48,16 @@ export default function Map() {
               }
           };
       
-          const interval = setInterval(() => {fetchData()},3000);
-          console.log(vehicleLocation)
-          return () => clearInterval(interval);
+          const interval = setInterval(() => {
+            fetchData()
+            console.log(vehicleLocation[0])
+            
+        },300)
+          return () => clearInterval(interval)
     },[])
      
     if (loading) return <p>Cargando datos...</p>;
     if (error) return <p>Error: {error}</p>;
-    console.log(vehicleLocation[0].latitude)
     return (
         <MapContainer center={[Number(vehicleLocation[0].latitude), Number(vehicleLocation[0].longitude)]} zoom={18} id="map">
             <TileLayer

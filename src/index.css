@@ -44,14 +44,20 @@ li {
 nav {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 0rem;
     gap: 1rem;
 }
 
 nav a {
+    padding: 1rem;
     font-size: 1.5rem;
     text-decoration: none;
     color: #ffffff;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: var(--principal);
 }
 
 .view {
@@ -66,6 +72,8 @@ nav a {
     height: 100vh;
     background-color: var(--principal);
 }
+
+
 
 .leaflet-container {
     height: 100%;
@@ -91,6 +99,10 @@ nav a {
     box-shadow: black 1px 1px 10px;
     border-radius: 1rem 1rem;
 
+}
+
+.menu {
+    display: none;
 }
 
 #map {

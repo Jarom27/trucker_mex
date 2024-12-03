@@ -1,14 +1,21 @@
-import { Link, NavLink } from "react-router"
+/* eslint-disable react/prop-types */
+import { NavLink } from "react-router"
 
-export default function Navbar() {
+
+export default function Navbar({isClickedMenu}) {
+  
   return (
-    <nav>
+    <>
+      
+      <nav className={isClickedMenu}>
         <NavLink to={"/"} end>
             Home
         </NavLink>
         <NavLink to={"/devices"}>
             Devices
         </NavLink>
-    </nav>
+      </nav>
+    </>
+    
   )
 }
