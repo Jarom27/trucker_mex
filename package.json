@@ -17,6 +17,8 @@
     "react-leaflet": "^4.2.1",
     "react-router": "^7.0.1",
     "react-router-dom": "^7.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "trucker_mex": "file:"
   },
   "devDependencies": {

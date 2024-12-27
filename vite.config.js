@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+
   plugins: [react()],
   server: {
     port: process.env.PORT || 3000,
@@ -13,5 +14,10 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+  },
+  build: {
+    target: 'esnext',
+    minify: 'terser',
+    chunkSizeWarningLimit: 500, // Ajusta según sea necesario
   },
 })
