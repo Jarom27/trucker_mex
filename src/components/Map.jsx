@@ -24,6 +24,7 @@ export default function Map() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const wsRef = useRef(null); // Referencia para mantener la instancia del WebSocket
+  const mapRef = useRef(null); // Referencia al mapa
   const params = useParams();
 
   useEffect(() => {
@@ -42,7 +43,6 @@ export default function Map() {
         try {
           const data = JSON.parse(event.data);
 
-          // Extraer datos anidados según el `params.id`
           if (data[params.id]) {
             const { Latitude, Longitude, Altitude, Timestamp } = data[params.id];
             setVehicleLocation({
@@ -88,10 +88,25 @@ export default function Map() {
     };
   }, [params.id]);
 
+  // Actualizar el centro del mapa cuando cambien las coordenadas
+  useEffect(() => {
+    if (
+      mapRef.current &&
+      vehicleLocation.latitude !== 0 &&
+      vehicleLocation.longitude !== 0 &&
+      !isNaN(vehicleLocation.latitude) &&
+      !isNaN(vehicleLocation.longitude)
+    ) {
+      mapRef.current.setView(
+        [vehicleLocation.latitude, vehicleLocation.longitude],
+        mapRef.current.getZoom()
+      );
+    }
+  }, [vehicleLocation.latitude, vehicleLocation.longitude]);
+
   if (loading) return <p>Cargando datos...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  // Validar que las coordenadas son válidas antes de renderizar el mapa
   const isValidCoordinates =
     vehicleLocation.latitude !== 0 &&
     vehicleLocation.longitude !== 0 &&
@@ -105,6 +120,7 @@ export default function Map() {
       center={[Number(vehicleLocation.latitude), Number(vehicleLocation.longitude)]}
       zoom={18}
       id="map"
+      ref={mapRef}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
