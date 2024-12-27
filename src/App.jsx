@@ -1,7 +1,7 @@
 import { Outlet } from "react-router"
 import Navbar from "./components/Navbar"
 import { useState } from "react"
-
+import truckerLogo from "./assets/trucker.svg"
 function App() {
   const [isClickedMenu, setIsClickedMenu] = useState("extend")
   function handleMenu(){
@@ -17,7 +17,7 @@ function App() {
       <div className="sidebar">
         <div className="app-bar">
           <span className="material-symbols-outlined menu" onClick={handleMenu}>menu</span>
-          <h1>Trucker Mex</h1>
+          <img className="logo" src={truckerLogo} alt="Trucker logo"/>
         </div>
         <Navbar isClickedMenu={isClickedMenu} handleMenu={handleMenu}></Navbar>
         

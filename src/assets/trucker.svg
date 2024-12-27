@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="185.89935mm"
+   height="46.369949mm"
+   viewBox="0 0 185.89935 46.369949"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="trucker.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.44631734"
+     inkscape:cx="346.16625"
+     inkscape:cy="122.11042"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="134.4335"
+       y="371.93268"
+       width="595.98853"
+       height="156.83908"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-13.480469,-73.083459)">
+    <text
+       xml:space="preserve"
+       transform="matrix(1.6474531,0,0,1.7481659,-209.77339,-594.74612)"
+       id="text1"
+       style="font-size:37.3333px;white-space:pre;shape-inside:url(#rect1);fill:#000000"
+       clip-path="none"><tspan
+         x="134.43359"
+         y="408.00172"
+         id="tspan3"><tspan
+           style="font-size:41.5751px;font-family:Coolvetica;-inkscape-font-specification:Coolvetica"
+           id="tspan1">t</tspan><tspan
+           style="font-family:Coolvetica;-inkscape-font-specification:Coolvetica"
+           id="tspan2">rucker</tspan></tspan></text>
+  </g>
+</svg>

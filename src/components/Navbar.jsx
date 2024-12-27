@@ -8,10 +8,10 @@ export default function Navbar({isClickedMenu}) {
     <>
       
       <nav className={isClickedMenu}>
-        <NavLink to={"/"} end>
+        <NavLink to={"/dashboard"} end>
             Home
         </NavLink>
-        <NavLink to={"/devices"}>
+        <NavLink to={"/dashboard/devices"}>
             Devices
         </NavLink>
       </nav>

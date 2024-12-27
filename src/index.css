@@ -105,6 +105,48 @@ nav a:hover {
     display: none;
 }
 
+.logo {
+    width: 100%;
+    padding: 2rem;
+}
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+form img {
+    width: 80%;
+}
+
+button {
+    background-color: var(--principal);
+    padding: .5rem;
+}
+
+label {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: .5rem;
+}
+
 #map {
     height: 100vh;
     /* El mapa ocupará toda la pantalla */
