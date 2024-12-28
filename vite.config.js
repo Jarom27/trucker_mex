@@ -6,7 +6,7 @@ export default defineConfig({
 
   plugins: [react()],
   server: {
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 80,
     host: true,
     proxy: {
       '/api': {
@@ -16,8 +16,9 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
-    chunkSizeWarningLimit: 500, // Ajusta según sea necesario
+    outDir: 'dist',
+    assetsDir: 'assets',
+    minify: 'esbuild'
   },
+  base: '/',
 })
